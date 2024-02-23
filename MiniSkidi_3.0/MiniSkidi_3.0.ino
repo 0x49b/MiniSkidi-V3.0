@@ -31,6 +31,8 @@
 #include <ESPAsyncTCP.h> // by dvarrel
 #endif
 
+#include <PS4Controller.h>
+
 
 // defines
 #define bucketServoPin  23
@@ -334,6 +336,7 @@ void setup(void)
 {
   setUpPinModes();
   Serial.begin(115200);
+  PS4.begin();
 
   WiFi.softAP(ssid );
   IPAddress IP = WiFi.softAPIP();
